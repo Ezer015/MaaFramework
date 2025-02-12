@@ -10,7 +10,7 @@ bool Activity::parse(const json::value& config)
         "{ADB}", "-s", "{ADB_SERIAL}", "shell", "monkey -p {INTENT} 1",
     };
     static const json::array kDefaultStartActivityArgv = {
-        "{ADB}", "-s", "{ADB_SERIAL}", "shell", "am start -n {INTENT}",
+        "{ADB}", "-s", "{ADB_SERIAL}", "shell", "am start -n {INTENT} --windowingMode 4",
     };
     static const json::array kDefaultStopAppArgv = {
         "{ADB}", "-s", "{ADB_SERIAL}", "shell", "am force-stop {INTENT}",
